@@ -1,0 +1,60 @@
+import java.util.*;
+class Solution{
+	
+	public static void main(String []argh)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		while (sc.hasNext()) {
+        Stack<Character> st=new Stack<Character>();
+			String input=sc.next();
+            char[] str=input.toCharArray();
+            // System.out.println("new-----------------"+input);
+
+            for(int i=0;i<str.length;i++){
+                // System.out.println("for "+ str[i]);
+                if(str[i]=='('||
+                    str[i]=='{'||
+                    str[i]=='['){
+                    st.push(str[i]);
+                    // System.out.println("stack"+st.toString());
+                }
+                else{
+                    char p='(';
+                    if(!st.empty())
+                     p=st.pop();
+                     else{
+                        st.push('*');
+                     break;
+                     }
+                    //  System.out.println("popstack"+st.toString());
+                    switch(p){
+                        case '(':
+                            if(str[i]!=')')
+                                break;
+
+                        case '{':
+                            if(str[i]!='}')
+                                break;
+
+                        case '[':
+                            if(str[i]!=']')
+                                break;
+                        default:
+                        // System.out.println("def");
+                            continue;
+                    }
+
+                }
+            }
+            if(st.empty()){
+            System.out.println("true");
+            continue;
+            }
+            System.out.println("false");
+        }
+	}
+}
+
+
+
