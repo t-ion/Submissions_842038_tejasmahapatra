@@ -1,0 +1,2 @@
+![Java Comparator](https://github.com/t-ion/Submissions_842038_tejasmahapatra/blob/master/17%20july/Java%20comparator.png)
+![Java Stack](https://github.com/t-ion/Submissions_842038_tejasmahapatra/blob/master/17%20july/Java%20Stack.png)
